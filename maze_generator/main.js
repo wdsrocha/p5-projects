@@ -7,9 +7,9 @@ var m;
 var player;
 
 function setup() {
-  createCanvas(windowWidth, 600);
-  n = height / scl - 1;
-  m = width / scl;
+  createCanvas(windowWidth, windowHeight - 140);
+  n = Math.floor(height / scl - 1);
+  m = Math.floor(width / scl + 1);
   generateMaze();
 }
 
@@ -48,9 +48,7 @@ function generateMaze() {
   shuffle(edges, true);
 
   for (var idx = 0; idx < edges.length; idx++) {
-    var i = edges[idx][0];
-    var j = edges[idx][1];
-    var k = edges[idx][2];
+    const [i, j, k] = edges[idx];
     mergeCell(i, j, k);
   }
 }

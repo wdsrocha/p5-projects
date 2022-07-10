@@ -20,7 +20,7 @@ var memo = [];
 const TEXT_SIZE = 32;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(Math.min(600, windowWidth), 600);
   textSize(TEXT_SIZE);
 
   for (var i = 0; i < CITYMAX; i++) {
@@ -70,7 +70,7 @@ function draw() {
     var ppDiff = (-(ans + totalDistance)).toFixed(2);
     text(`Total cost (DP): ${ans}`, 0, 300 + 2 * TEXT_SIZE);
     text(
-      `Distance cost from optimal: ${-(ans + totalDistance)}`,
+      `Distance from optimal: ${-(ans + totalDistance)}`,
       0,
       300 + 3 * TEXT_SIZE
     );

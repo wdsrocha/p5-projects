@@ -75,3 +75,15 @@ a:hover {
 li {
   margin-bottom: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  canvas {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}

@@ -3,7 +3,7 @@ var sz = 10;
 var grid = [];
 
 function setup() {
-  createCanvas(windowWidth, 600);
+  createCanvas(windowWidth, windowHeight - 140);
 
   n = floor(width / sz);
   m = floor(height / sz);
