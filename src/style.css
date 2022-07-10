@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+header > p {
+  /* Tailwind text-gray-500 */
+  color: rgb(107 114 128);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: blue;
+  /* Stolen from https://musicforprogramming.net */
+  box-shadow: 0.4ch 0 0 0 blue, -0.3ch 0 0 0 blue, 0.4ch 0.2ch 0 0 blue,
+    -0.3ch 0.2ch 0 0 blue;
+}
+
+li {
+  margin-bottom: 1rem;
+}
