@@ -4,7 +4,9 @@ function GeneticAlgo(mutationRate, populationSize) {
   this.mutationRate = mutationRate;
   this.populationSize = populationSize;
 
-  for (var i = 0; i < this.populationSize; i++) this.population[i] = new DNA();
+  for (var i = 0; i < this.populationSize; i++) {
+    this.population[i] = new DNA();
+  }
 
   this.best = this.population[0];
   this.evaluate();

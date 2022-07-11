@@ -4,7 +4,9 @@ function DNA(customGenes = []) {
   this.fitness = 0;
 
   if (customGenes.length == 0) {
-    for (var i = 0; i < this.genesSize; i++) this.genes[i] = i;
+    for (var i = 0; i < this.genesSize; i++) {
+      this.genes[i] = i;
+    }
     shuffle(this.genes, 1);
   } else this.genes = customGenes;
 }
@@ -18,7 +20,9 @@ DNA.prototype.inversion = function () {
 
   for (var i = 0; i < this.genesSize; i++) {
     ip[i] = 0;
-    for (var j = 0; this.genes[j] != i; j++) ip[i] += this.genes[j] > i;
+    for (var j = 0; this.genes[j] != i; j++) {
+      ip[i] += this.genes[j] > i;
+    }
   }
 
   return ip;
@@ -30,7 +34,9 @@ DNA.prototype.reversion = function (ip) {
   for (var i = 0; i < this.genesSize; i++) p[i] = -1;
 
   for (var i = 0; i < this.genesSize; i++) {
-    for (var j = 0; ip[i] || p[j] != -1; j++) ip[i] -= p[j] == -1;
+    for (var j = 0; ip[i] || p[j] != -1; j++) {
+      ip[i] -= p[j] == -1;
+    }
     p[j] = i;
   }
 
